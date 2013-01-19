@@ -38,10 +38,5 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Game.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="app.desktop">
-      <DeployService-TargetDirectoryId>Linux.DesktopApplications</DeployService-TargetDirectoryId>
-    </Content>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
