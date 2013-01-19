@@ -7,12 +7,12 @@ namespace gtkmine
 	{
 		public static void Main (string[] args)
 		{
-			int rows = 5;
-			int columns = 5;
+			uint rows = 5;
+			uint columns = 5;
 			uint spacing = 2;
 			Application.Init ();
 			Window win = new Window ("Minesweeper");
-			var table = new global::Gtk.Table (((uint)(rows)), ((uint)(columns)), false);
+			var table = new global::Gtk.Table (rows, columns, false);
 			table.RowSpacing = (spacing);
 			table.ColumnSpacing = (spacing);
 			for (uint row = 0; row < rows; row++) {
@@ -22,7 +22,7 @@ namespace gtkmine
 					button.Label = (row + column + row * column).ToString().PadLeft(3);
 					button.Clicked += new EventHandler(OnButtonClicked);
 					table.Attach(button, row, row+1,column, column+1);
-					table.Add(button);
+					//table.Add(button);
 				}
 			}
 			table.ShowAll();
