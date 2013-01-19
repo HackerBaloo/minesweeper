@@ -9,18 +9,17 @@ namespace gtkmine
 		{
 			int rows = 5;
 			int columns = 5;
+			uint spacing = 2;
 			Application.Init ();
 			Window win = new Window ("Minesweeper");
-			win.WindowPosition = ((global::Gtk.WindowPosition)(4));
-			// Container child MainWindow.Gtk.Container+ContainerChild
-			var table = new global::Gtk.Table (((uint)(5)), ((uint)(5)), false);
-			table.RowSpacing = ((uint)(6));
-			table.ColumnSpacing = ((uint)(6));
+			var table = new global::Gtk.Table (((uint)(rows)), ((uint)(columns)), false);
+			table.RowSpacing = (spacing);
+			table.ColumnSpacing = (spacing);
 			for (uint row = 0; row < rows; row++) {
 				for (uint column = 0; column < columns; column++) {
 					var button = new Button();
 					button.CanFocus = true;
-					button.Label = (row + column + row * column).ToString();
+					button.Label = (row + column + row * column).ToString().PadLeft(3);
 					button.Clicked += new EventHandler(OnButtonClicked);
 					table.Attach(button, row, row+1,column, column+1);
 					table.Add(button);
