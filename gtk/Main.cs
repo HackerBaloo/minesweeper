@@ -22,7 +22,6 @@ namespace gtkmine
 					button.Label = (row + column + row * column).ToString().PadLeft(3);
 					button.Clicked += new EventHandler(OnButtonClicked);
 					table.Attach(button, row, row+1,column, column+1);
-					//table.Add(button);
 				}
 			}
 			table.ShowAll();
