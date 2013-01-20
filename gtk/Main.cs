@@ -18,8 +18,9 @@ namespace gtkmine
 			for (uint row = 0; row < rows; row++) {
 				for (uint column = 0; column < columns; column++) {
 					var button = new Button();
+
 					button.CanFocus = true;
-					button.Label = (row + column + row * column).ToString().PadLeft(3);
+					button.Label = (string.Empty.PadLeft(5));
 					button.Clicked += new EventHandler(OnButtonClicked);
 					table.Attach(button, row, row+1,column, column+1);
 				}
