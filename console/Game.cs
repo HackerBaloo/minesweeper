@@ -177,7 +177,9 @@ namespace minesweeper
 		{
 			PrintHeader();
 			Console.SetCursorPosition(topmargin, topmargin);
-			Console.Write("   01234");
+			Console.Write("   ");
+			for(var column = 0; column < columns; column++)
+				Console.Write(column.ToString());
 			for(var row = 0; row < rows; row++)
 			{
 				Console.CursorTop++;
