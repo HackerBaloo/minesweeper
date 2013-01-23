@@ -2,7 +2,7 @@ using System;
 
 namespace minesweeper
 {
-	public class Game
+	public class GameEngine
 	{
 		int columns = 4;
 		int rows = 4;
@@ -20,7 +20,7 @@ namespace minesweeper
 		int totalLeft;
 		int flagsLeft;
 
-		public Game ()
+		public GameEngine ()
 		{
 			flipped = new bool[rows, columns];
 			flagged = new bool[rows, columns];
