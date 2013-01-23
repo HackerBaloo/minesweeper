@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace WindowsForms
 {
-	public partial class Form1 : Form
+	public class Board : Form
 	{
 		Tile[,] tiles;
 
-		public Form1 ()
+		public Board ()
 		{
 			var rows = 4;
 			var columns = 4;
