@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minesweeper", "console\minesweeper.csproj", "{D5FFC34C-75EF-4D80-A74E-994C9A8049ED}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "console", "console\console.csproj", "{D5FFC34C-75EF-4D80-A74E-994C9A8049ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gtkmine", "gtk\gtkmine.csproj", "{3ADA4B8A-1C0C-4356-AE18-F1011801CA69}"
 EndProject
@@ -27,6 +27,6 @@ Global
 		{D5FFC34C-75EF-4D80-A74E-994C9A8049ED}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = console\minesweeper.csproj
+		StartupItem = WindowsForms\WindowsForms.csproj
 	EndGlobalSection
 EndGlobal
