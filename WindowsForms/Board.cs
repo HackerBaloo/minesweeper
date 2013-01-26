@@ -4,32 +4,24 @@ using System.Drawing;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Engine;
 
 namespace WindowsForms
 {
 	public class Board : Form
 	{
-		Tile[,] tiles;
 
 		public Board ()
 		{
-			var rows = 4;
-			var columns = 4;
-			var margin = 2;
-			var size = new System.Drawing.Size(23, 23);
-			tiles = new Tile[rows,columns];
+			var engine = new GameEngine(4, 4, 1);
+			engine.UserMessage += HandleUserMessage;
 
 			SuspendLayout();
 
-			for (var row = 0; row < rows; row++) {
-				for (var column = 0; column < columns; column++) {
-					var tile = new Tile();
-					tiles[row, column] = tile; 
-					tile.Location = new System.Drawing.Point(13 + (size.Width + margin) * column, 24 + (size.Height + margin) * row);
-					tile.Size = size;
-					tile.TabIndex = 1 + column + columns * row;
+			for (var row = 0; row < engine.Rows; row++) {
+				for (var column = 0; column < engine.Columns; column++) {
+					var tile = new Tile(column, row, engine);
 					Controls.Add (tile);
-					tile.Click += tile.HandleClick;
 				}
 			}
 //			AutoScaleDimensions = new System.Drawing.SizeF (6F, 13F);
@@ -37,9 +29,13 @@ namespace WindowsForms
 			ClientSize = new System.Drawing.Size (184, 262);
 			Text = "Minesweeper";
 			ResumeLayout (false);
+			engine.Init();
 
 		}
 
-
+		void HandleUserMessage (object sender, UserMesssageArgs e)
+		{
+			MessageBox.Show(e.Message);
+		}
 	}
 }

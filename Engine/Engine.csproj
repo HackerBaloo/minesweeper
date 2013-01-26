@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{BC22FB9D-0EDB-4262-B069-B47F67B42402}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>WindowsForms</RootNamespace>
-    <AssemblyName>WindowsForms</AssemblyName>
+    <ProjectGuid>{7194BFE0-2752-430B-97A2-BCC55B7BDF62}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Engine</RootNamespace>
+    <AssemblyName>Engine</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -16,6 +16,7 @@
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
     <ConsolePause>false</ConsolePause>
@@ -24,25 +25,18 @@
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Drawing" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Tile.cs" />
-    <Compile Include="Board.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Engine\Engine.csproj">
-      <Project>{7194BFE0-2752-430B-97A2-BCC55B7BDF62}</Project>
-      <Name>Engine</Name>
-    </ProjectReference>
+    <Compile Include="GameEngine.cs" />
+    <Compile Include="TileStatus.cs" />
+    <Compile Include="ITile.cs" />
+    <Compile Include="Square.cs" />
+    <Compile Include="UserMesssageArgs.cs" />
+    <Compile Include="UserMessageEventHandler.cs" />
   </ItemGroup>
 </Project>

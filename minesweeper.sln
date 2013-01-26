@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gtkmine", "gtk\gtkmine.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms", "WindowsForms\WindowsForms.csproj", "{BC22FB9D-0EDB-4262-B069-B47F67B42402}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{7194BFE0-2752-430B-97A2-BCC55B7BDF62}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -17,6 +19,10 @@ Global
 		{3ADA4B8A-1C0C-4356-AE18-F1011801CA69}.Debug|x86.Build.0 = Debug|x86
 		{3ADA4B8A-1C0C-4356-AE18-F1011801CA69}.Release|x86.ActiveCfg = Release|x86
 		{3ADA4B8A-1C0C-4356-AE18-F1011801CA69}.Release|x86.Build.0 = Release|x86
+		{7194BFE0-2752-430B-97A2-BCC55B7BDF62}.Debug|x86.ActiveCfg = Debug|x86
+		{7194BFE0-2752-430B-97A2-BCC55B7BDF62}.Debug|x86.Build.0 = Debug|x86
+		{7194BFE0-2752-430B-97A2-BCC55B7BDF62}.Release|x86.ActiveCfg = Release|x86
+		{7194BFE0-2752-430B-97A2-BCC55B7BDF62}.Release|x86.Build.0 = Release|x86
 		{BC22FB9D-0EDB-4262-B069-B47F67B42402}.Debug|x86.ActiveCfg = Debug|x86
 		{BC22FB9D-0EDB-4262-B069-B47F67B42402}.Debug|x86.Build.0 = Debug|x86
 		{BC22FB9D-0EDB-4262-B069-B47F67B42402}.Release|x86.ActiveCfg = Release|x86
